@@ -1,0 +1,32 @@
+[
+  {
+    "id": "Settlement1",
+    "status": "SENT",
+    "bank_account_id": "JGHJ0343",
+    "initiated_at": "2013-01-02T08:00:00.000Z",
+    "total_money": {
+      "amount": 5981,
+      "currency_code": "USD"
+    }
+  },
+  {
+    "id": "Settlement2",
+    "status": "SENT",
+    "bank_account_id": "JGHJ0343",
+    "initiated_at": "2013-01-02T08:00:00.000Z",
+    "total_money": {
+      "amount": 5981,
+      "currency_code": "USD"
+    }
+  },
+  {
+    "id": "Settlement3",
+    "status": "SENT",
+    "bank_account_id": "JGHJ0343",
+    "initiated_at": "2013-01-02T08:00:00.000Z",
+    "total_money": {
+      "amount": 5981,
+      "currency_code": "USD"
+    }
+  }
+]
