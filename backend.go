@@ -11,6 +11,7 @@ import (
 	"io"
 )
 
+// regexp object to pick up the next page's http link from a response
 var linkParser = regexp.MustCompile(`http[^>]+`)
 
 type Backend struct {
@@ -20,6 +21,7 @@ type Backend struct {
 	client *http.Client
 }
 
+// Creates a backend with an optional http client
 func NewBackend(token string, baseURL string, merchantId string, timeout time.Duration, client *http.Client) (*Backend, error) {
 	backend := &Backend{
 		token: token,
@@ -34,6 +36,7 @@ func NewBackend(token string, baseURL string, merchantId string, timeout time.Du
 	return backend, nil
 }
 
+// Creates a http request object
 func (this *Backend) makeRequest(query *Query) (*http.Request, error) {
 
 	var body io.Reader
@@ -82,9 +85,8 @@ func (this *Backend) parseResponse(res *http.Response, query *Query) (interface{
 	return v, nil
 }
 
-
 // Creates an iterator object based on the returned list type
-func (this *Backend) createIterator(l interface{}, res *http.Response, query*Query) (interface{}) {
+func (this *Backend) createIterator(l interface{}, res *http.Response, query*Query) *Iter {
 
 	list := query.GetList(l)
 	var nextPageQuery *Query = nil
@@ -105,7 +107,8 @@ func (this *Backend) createIterator(l interface{}, res *http.Response, query*Que
 	return &iter
 }
 
-func (this *Backend) Dial(query *Query) (interface{}, *Error) {
+// Calling a Square API endpoint
+func (this *Backend) Call(query *Query) (interface{}, *Error) {
 	
 	req, e := this.makeRequest(query);
 	if e != nil { return nil, MakeError(ErrorParse, nil, e) }
@@ -122,8 +125,8 @@ func (this *Backend) Dial(query *Query) (interface{}, *Error) {
 	return v, nil
 }
 
-// Updates an iterator with the next page's data
-func (this *Backend) dialNextPage(iter *Iter) (*Error) {
+// Loads an iterator's next page and updates its list
+func (this *Backend) loadNextPage(iter *Iter) *Error {
 
 	req, e := this.makeRequest(iter.nextPageQuery);
 	if e != nil { MakeError(ErrorParse, nil, e) }
@@ -140,7 +143,7 @@ func (this *Backend) dialNextPage(iter *Iter) (*Error) {
 	} else { 
 		iter.nextPageQuery = nil
 	}
-	iter.SetList(iter.query.GetList(v))
+	iter.list = iter.query.GetList(v)
 	iter.index = -1
 	iter.currentPage++
 	

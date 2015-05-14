@@ -27,6 +27,7 @@ type res struct {
 type Mock struct {
 	Server *httptest.Server
 	Client *http.Client
+	mockFolder string
 	things map[string]*map[string]res
 }
 
@@ -37,8 +38,10 @@ var notfound = []byte(`
 }
 `)
 
-func New() *Mock{
-	s := Mock{}
+func New(mockFolder string) *Mock{
+	s := Mock{
+		mockFolder: mockFolder,
+	}
 	
 	s.things = make(map[string]*map[string]res)
 	
@@ -88,11 +91,11 @@ func (this *Mock) add(endpoint string, method string, code int, filename string,
 	
 	m := make(map[string]res)
 	m[method] = r
-	this.things[path] = &m	
+	this.things[path] = &m		
 }
 
 func (this *Mock) addFolder(folder string) {
-	dir, err := filepath.Abs("../mocks/" + folder)
+	dir, err := filepath.Abs(this.mockFolder + "/" + folder)
 	if err != nil { log.Println("Dir not found", folder); return }
 	
 	files, err := ioutil.ReadDir(dir)
@@ -121,7 +124,7 @@ func (this *Mock) addFolder(folder string) {
 }
 
 func (this *Mock) addAll() {
-	dir, _ := filepath.Abs("../mocks")
+	dir, _ := filepath.Abs(this.mockFolder)
 	
 	files, _ := ioutil.ReadDir(dir)
 	

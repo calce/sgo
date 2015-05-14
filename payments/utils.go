@@ -2,6 +2,7 @@ package payments
 
 import (
 	"github.com/calce/sgo"
+	"errors"
 )
 
 const (
@@ -10,14 +11,11 @@ const (
 
 var defaultClient *Payments = nil
 
-type Iter struct {
-	*sgo.Iter
-}
-
-func New(backend *sgo.Backend) *Payments {
+func New(backend *sgo.Backend) (*Payments, error) {
+	if backend == nil { return nil, errors.New("Backend needed") }
 	return &Payments {
 		backend: backend,
-	}
+	}, nil
 }
 
 // getObject creates a new instance of Payment
@@ -62,14 +60,7 @@ func getClient() *Payments {
 	if defaultClient == nil {
 		defaultBackend, err := sgo.GetDefaultBackend()
 		if err != nil { return nil }
-		defaultClient = New(defaultBackend)
+		defaultClient, _ = New(defaultBackend)
 	}
 	return defaultClient
-}
-
-// takes the next object from sgo.Iter.Next() and convert into *Payment
-func (i *Iter) Next() (*sgo.Payment, *sgo.Error) {
-	iter, err := i.Iter.Next()
-	if err != nil { return nil, err }
-	return iter.(*sgo.Payment), nil
 }

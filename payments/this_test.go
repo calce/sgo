@@ -4,102 +4,32 @@ import (
 	"testing"
 	. "github.com/smartystreets/goconvey/convey"
 	"github.com/calce/sgo/tests"
-	"github.com/calce/sgo"
+//	"github.com/calce/sgo"
 )
 
-func inspectPayment(index int, payment *sgo.Payment) {	
-	//Println("Payment", payment.Id)
-}
-
-func TestPayments(t *testing.T) {
-
-	sgo.AutoLoadNextPage = true
-	backend := tests.GetTestBackend()
-	payments := New(backend)
+func TestNew(t *testing.T) {
 	
-	Convey("List", t, func(){
-		
-		payments, err := payments.List(nil)
-		Convey("Should list correct payments", func(){
-			So(err, ShouldBeNil)			
-			var i = 0
-			for payments.HasNext() {
-				payment, err := payments.Next()				
-				So(err, ShouldBeNil)						
-				So(payment, ShouldNotBeNil)
-				inspectPayment(i, payment)
-				i++
-			}
+	Convey("Payments", t, func(){		
+		Convey("Given a good backend", func(){			
+			Convey("Payments object should be created properly", func(){
+				backend := tests.GetTestBackend()		
+				payments, _ := New(backend)
+				So(payments, ShouldNotBeNil)
+			})
 		})
-		
-	})
-	
-	Convey("Retrieve", t, func(){
-		
-		_, err := payments.Retrieve("yes")
-		
-		Convey("Should perfectly retrieve a payment", func(){
-			So(err, ShouldBeNil)
+		Convey("Given a nil backend", func(){
+			Convey("creating new payments object should raise error", func(){
+				_, err := New(nil)
+				So(err, ShouldNotBeNil)
+			})
 		})		
-		
-	})		
-}
-
-func TestMinors(t *testing.T) {
-	sgo.SetDefaultBackend(tests.GetMockBackend())
-
-	Convey("Skips", t, func(){
-		List(nil)
-		List(&sgo.PaymentListParams{})
-		Retrieve("")
-		getObject()
-		getListObject()
 	})
 	
-	Convey("Should return default payment client", t, func(){
-		So(getClient(), ShouldNotBeNil)
-	})
-
-	Convey("Should properly convert lists", t, func(){
-		l := []sgo.Payment{
-			sgo.Payment{}, sgo.Payment{}, sgo.Payment{},
-		}
-		list := getList(&l)
-		So(len(*list), ShouldEqual, 3)
-	})
 }
 
-func TestIterator(t *testing.T) {
+func TestDefaults(t *testing.T) {
 
-	backend := tests.GetTestBackend()
-	sgo.SetDefaultBackend(backend)
-	list := []interface{}{
-		&sgo.Payment{
-			Id: "0",
-			MerchantId: "me",
-		},
-		&sgo.Payment{
-			Id: "1",
-			MerchantId: "me",
-		}, 
-		&sgo.Payment{
-			Id: "2",
-			MerchantId: "me",
-		},
-	}
-
-	siter := sgo.Iter{}
-	siter.SetList(&list)
-
-	iter := Iter{
-		&siter,
-	}
-	
-	Convey("Payment iterator should return Payment type", t, func(){
-		for iter.HasNext() {
-			payment, err := iter.Next()
-			So(err, ShouldBeNil)
-			So(payment.MerchantId, ShouldEqual, "me")
-		}		
+	Convey("Given the default backend", t, func(){
+//		Convey("")
 	})
 }

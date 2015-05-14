@@ -1,5 +1,5 @@
 /*
-	Params create url encoded strings from structs
+	Params create url encoded strings from structs using the reflect package
 	Supported field types: string, int, float
 */
 package url

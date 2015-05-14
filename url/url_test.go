@@ -12,7 +12,8 @@ type Params struct {
 	Ninja string								`param:"_"`
 	Yes string									`param:"yes"`
 	Number int									`param:"number"`
-	Money float64								`param:"money"`	
+	Money float64								`param:"money"`
+	Changes float32							`param:"changes"`
 }
 
 type BadParams struct {
@@ -28,6 +29,7 @@ func TestParams(t *testing.T) {
 		Ninja: "things",
 		Number: 999,
 		Money: 999.999,
+		Changes: 4.2,
 	}
 	
 	bad := BadParams{
@@ -35,20 +37,44 @@ func TestParams(t *testing.T) {
 	}
 	
 	Convey("Params", t, func(){
-
-		s, err := Encode(&good)
-		Convey("Should be able to encode good structs", func(){
-			So(err, ShouldBeNil)	
+		
+		Convey("should be able to encode good structs", func(){
+			_, err := Encode(&good)
+			So(err, ShouldBeNil)
 		})
-		Convey("Should generate correct value", func(){			
-			So(s, ShouldEqual, "begin_time=2013-01-15T00%3A00%3A00Z&end_time=2013-01-31T00%3A00%3A00Z&money=999.999&number=999")			
+
+		Convey("should be able to encode good non-pointer structs", func(){
+			_, err := Encode(good)
+			So(err, ShouldBeNil)
 		})
 		
-		Convey("Should return an error from structs with unsupported types", func(){
-			_, err = Encode(&bad)
+		Convey("should generate correct value", func(){
+			s, _ := Encode(&good)
+			So(s, ShouldEqual, "begin_time=2013-01-15T00%3A00%3A00Z&changes=4.2&end_time=2013-01-31T00%3A00%3A00Z&money=999.999&number=999")			
+		})
+		
+		Convey("should return an error from structs with unsupported types", func(){
+			_, err := Encode(&bad)
 			So(err, ShouldNotBeNil)
-		})		
+		})
 
+		Convey("should not encode non-struct", func(){
+			_, err := Encode("yay")
+			So(err, ShouldNotBeNil)
+		})
+
+		Convey("ParamsEncode()", func(){			
+			Convey("should generate correct value", func(){
+				s := ParamsEncode(&good)
+				So(s, ShouldEqual, "begin_time=2013-01-15T00%3A00%3A00Z&changes=4.2&end_time=2013-01-31T00%3A00%3A00Z&money=999.999&number=999")
+			})
+			Convey("should return blank on bad value", func(){
+				s := ParamsEncode(&bad)
+				So(s, ShouldBeBlank)				
+			})
+		})
+		
 	})
+	
 	
 }

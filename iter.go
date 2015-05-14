@@ -9,6 +9,10 @@ import (
 
 type NextPageFunc func() (error)
 
+/*type NextPageLoader interface {
+	loadNextPage(iter *Iter) *Error
+}*/
+
 type Iter struct {
 	backend *Backend
 	query *Query
@@ -49,19 +53,19 @@ func (this *Iter) HasNextPage() bool {
 }
 
 func (this *Iter) nextPage() *Error {
-	return this.backend.dialNextPage(this)
+	return this.backend.loadNextPage(this)
 }
 
-func (this *Iter) CurrentPage() int {
+func (this *Iter) GetCurrentPage() int {
 	return this.currentPage
 }
 
-// Not safe, don't use. Testing purpose only
-func (this *Iter) SetList(l *[]interface{}) {
+// For testing purpose only
+func (this *Iter) _SetList(l *[]interface{}) {
 	this.list = l
 	this.index = -1
 }
-// Not safe, don't use. Testing purpose only
-func (this *Iter) SetNextQuery(query *Query) {
+// For testing purpose only
+func (this *Iter) _SetNextQuery(query *Query) {
 	this.nextPageQuery = query
 }

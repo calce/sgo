@@ -13,7 +13,7 @@ func (this *Payments) List(params *sgo.PaymentListParams) (*Iter, *sgo.Error) {
 
 	encodedParams := ""	
 	if params != nil {
-		encodedParams = url.ParamsEncode(params) 
+		encodedParams = url.ParamsEncode(params)
 	}
 
 	var query = sgo.Query{
@@ -25,7 +25,7 @@ func (this *Payments) List(params *sgo.PaymentListParams) (*Iter, *sgo.Error) {
 	query.GetObject = getListObject
 	query.GetList = getList
 	
-	v, err := this.backend.Dial(&query)
+	v, err := this.backend.Call(&query)
 	if err != nil { return nil, err }
 
 	iter := v.(*sgo.Iter)
@@ -45,7 +45,7 @@ func (this *Payments) Retrieve(paymentId string) (*sgo.Payment, *sgo.Error) {
 	}
 	query.GetObject = getObject
 	
-	payment, err := this.backend.Dial(&query)
+	payment, err := this.backend.Call(&query)
 	if err != nil { return nil, err }
 	
 	return payment.(*sgo.Payment), nil
