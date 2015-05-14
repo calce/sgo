@@ -19,6 +19,6 @@ func GetDefaultBackend() (*Backend, error) {
 	return defaultBackend, nil
 }
 
-func SetDefaultBackend(backend *Backend) {
+func _SetDefaultBackend(backend *Backend) {
 	defaultBackend = backend
 }

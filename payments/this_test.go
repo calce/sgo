@@ -4,7 +4,7 @@ import (
 	"testing"
 	. "github.com/smartystreets/goconvey/convey"
 	"github.com/calce/sgo/tests"
-//	"github.com/calce/sgo"
+	"github.com/calce/sgo"
 )
 
 func TestNew(t *testing.T) {
@@ -12,7 +12,7 @@ func TestNew(t *testing.T) {
 	Convey("Payments", t, func(){		
 		Convey("Given a good backend", func(){			
 			Convey("Payments object should be created properly", func(){
-				backend := tests.GetTestBackend()		
+				backend := tests.GetTestBackend()
 				payments, _ := New(backend)
 				So(payments, ShouldNotBeNil)
 			})
@@ -30,6 +30,11 @@ func TestNew(t *testing.T) {
 func TestDefaults(t *testing.T) {
 
 	Convey("Given the default backend", t, func(){
-//		Convey("")
+		Convey("The default payments client should be functional", func(){
+			backend := tests.GetTestBackend()
+			sgo._SetDefaultBackend(backend)
+			payments := getClient()
+			So(payments, ShouldNotBeNil)			
+		})
 	})
 }

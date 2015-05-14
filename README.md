@@ -29,44 +29,51 @@ func main() {
 
 }
 ```
-### Progress
-* Transaction Management
-	* [X] Payments
-	* [ ] Settlements
-	* [ ] Refunds
-	* [ ] Orders
-	* [ ] Merchant
-	* [ ] Bank Accounts
+### Progress / Tests
+
+Transaction Management
+
+|              | List | Retrieve | Delete | Update | Upload |
+|--------------|:----:|:--------:|:------:|:------:|:------:|
+| Payments     |  [X] |    [X]   |  [ ]   |   [ ]  |        |
+
+
+	* [X] ![](http://progressed.io/bar/20) Payments
+	* [ ] ![](http://progressed.io/bar/0) Settlements
+	* [ ] ![](http://progressed.io/bar/0) Refunds
+	* [ ] ![](http://progressed.io/bar/0) Orders
+	* [ ] ![](http://progressed.io/bar/0) Merchant
+	* [ ] ![](http://progressed.io/bar/0) Bank Accounts
 
 * Item Management
-	* [ ] Items
-	* [ ] Variations
-	* [ ] Inventory
-	* [ ] Modifier Lists
-	* [ ] Modifier Options
-	* [ ] Categories
-	* [ ] Discounts
-	* [ ] Fees
-	* [ ] Pages
-	* [ ] Cells
+	* [ ] ![](http://progressed.io/bar/0) Items
+	* [ ] ![](http://progressed.io/bar/0) Variations
+	* [ ] ![](http://progressed.io/bar/0) Inventory
+	* [ ] ![](http://progressed.io/bar/0) Modifier Lists
+	* [ ] ![](http://progressed.io/bar/0) Modifier Options
+	* [ ] ![](http://progressed.io/bar/0) Categories
+	* [ ] ![](http://progressed.io/bar/0) Discounts
+	* [ ] ![](http://progressed.io/bar/0) Fees
+	* [ ] ![](http://progressed.io/bar/0) Pages
+	* [ ] ![](http://progressed.io/bar/0) Cells
 
 * Batching
-	* [ ] Submit Batch
+	* [ ] ![](http://progressed.io/bar/0) Submit Batch
 
 * API Webhooks
-	* [ ] List
-	* [ ] Update
+	* [ ] ![](http://progressed.io/bar/0) List
+	* [ ] ![](http://progressed.io/bar/0) Update
 
 * Subscription Management
-	* [ ] Subscriptions
-	* [ ] Plans
+	* [ ] ![](http://progressed.io/bar/0) Subscriptions
+	* [ ] ![](http://progressed.io/bar/0) Plans
 
 * Multi-Location Management
-	* [ ] List Locations
-	* [ ] Retrieve Business
+	* [ ] ![](http://progressed.io/bar/0) List Locations
+	* [ ] ![](http://progressed.io/bar/0) Retrieve Business
 
 * Employee Management
-	* [ ] Employees
-	* [ ] Roles
-	* [ ] Timecards
-	* [ ] Cash Drawer Shifts
+	* [ ] ![](http://progressed.io/bar/0) Employees
+	* [ ] ![](http://progressed.io/bar/0) Roles
+	* [ ] ![](http://progressed.io/bar/0) Timecards
+	* [ ] ![](http://progressed.io/bar/0) Cash Drawer Shifts
