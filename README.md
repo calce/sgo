@@ -35,7 +35,7 @@ Transaction Management
 
 |              | List | Retrieve | Delete | Update | Upload | Tests |
 |--------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
-| Payments     |  [X] |    [X]   |  [ ]   |   [ ]  |        |    ![](http://progressed.io/bar/20)   |
+| Payments     |  ✅ |    [X]   |  [ ]   |   [ ]  |        |    ![](http://progressed.io/bar/20)   |
 
 
 * Transaction Management
