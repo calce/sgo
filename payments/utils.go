@@ -58,8 +58,7 @@ func Retrieve(paymentId string) (*sgo.Payment, *sgo.Error) {
 // getClient() returns the default Payments object
 func getClient() *Payments {
 	if defaultClient == nil {
-		defaultBackend, err := sgo.GetDefaultBackend()
-		if err != nil { return nil }
+		defaultBackend := sgo.GetDefaultBackend()
 		defaultClient, _ = New(defaultBackend)
 	}
 	return defaultClient

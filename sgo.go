@@ -10,15 +10,13 @@ var AutoLoadNextPage bool = false
 
 var defaultBackend *Backend
 
-func GetDefaultBackend() (*Backend, error) {
+func GetDefaultBackend() (*Backend) {
 	if defaultBackend == nil {
-		var err error
-		defaultBackend, err = NewBackend(Token, "https://connect.squareup.com/v1", MerchantId, time.Second * 10, nil)
-		if err != nil { return nil, err }
+		defaultBackend = NewBackend(Token, "https://connect.squareup.com/v1", MerchantId, time.Second * 10, nil)
 	}
-	return defaultBackend, nil
+	return defaultBackend
 }
 
-func _SetDefaultBackend(backend *Backend) {
+func SetDefaultBackend(backend *Backend) {
 	defaultBackend = backend
 }

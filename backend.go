@@ -22,7 +22,7 @@ type Backend struct {
 }
 
 // Creates a backend with an optional http client
-func NewBackend(token string, baseURL string, merchantId string, timeout time.Duration, client *http.Client) (*Backend, error) {
+func NewBackend(token string, baseURL string, merchantId string, timeout time.Duration, client *http.Client) (*Backend) {
 	backend := &Backend{
 		token: token,
 		merchantId: merchantId,
@@ -33,7 +33,7 @@ func NewBackend(token string, baseURL string, merchantId string, timeout time.Du
 	client.Timeout = timeout
 	backend.client = client
 	
-	return backend, nil
+	return backend
 }
 
 // Creates a http request object

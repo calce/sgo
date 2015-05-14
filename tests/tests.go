@@ -18,12 +18,12 @@ type Config struct {
 
 func mockBackend() *sgo.Backend {
 	sm := mocks.New("../mocks")
-	backend, _ := sgo.NewBackend("yay", "http://connect.squareup.com/v1", "me", time.Second * 30, sm.Client)
+	backend := sgo.NewBackend("yay", "http://connect.squareup.com/v1", "me", time.Second * 30, sm.Client)
 	return backend
 }
 
 func GetliveBackend(token string, timeout int) *sgo.Backend {
-	backend, _ := sgo.NewBackend(token, "https://connect.squareup.com/v1", "me", time.Second * time.Duration(timeout), nil)
+	backend := sgo.NewBackend(token, "https://connect.squareup.com/v1", "me", time.Second * time.Duration(timeout), nil)
 	return backend	
 }
 
@@ -43,7 +43,7 @@ func GetTestBackend() *sgo.Backend {
 		log.Println(err)
 	  panic("Unable to load configurations")
 	}	
-	backend, _ := sgo.NewBackend(config.Token, "https://connect.squareup.com/v1", "me", time.Second * time.Duration(config.Timeout), nil)
+	backend := sgo.NewBackend(config.Token, "https://connect.squareup.com/v1", "me", time.Second * time.Duration(config.Timeout), nil)
 	return backend	
 }
 

@@ -35,7 +35,7 @@ Transaction Management
 
 |                   | List | Retrieve | Delete | Update | Upload | Tests |
 |-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
-| Payments          |  ✔   |    ✔     |        |        |        |![](http://progressed.io/bar/20)|
+| Payments          |  ✔   |    ✔     |        |        |        |![](http://progressed.io/bar/0)|
 | Settlements       |      |          |        |        |        |![](http://progressed.io/bar/0) |
 | Refunds           |      |          |        |        |        |![](http://progressed.io/bar/0)|
 | Orders            |      |          |        |        |        |![](http://progressed.io/bar/0)|
@@ -83,7 +83,7 @@ Multi-Location Management
 
 |                   | List | Retrieve | Delete | Update | Upload | Tests |
 |-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
-| Location          |      |          |        |        |        |![](http://progressed.io/bar/0)|
+| Locations         |      |          |        |        |        |![](http://progressed.io/bar/0)|
 
 Employee Management
 

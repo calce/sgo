@@ -61,11 +61,12 @@ func (this *Iter) GetCurrentPage() int {
 }
 
 // For testing purpose only
-func (this *Iter) _SetList(l *[]interface{}) {
+func (this *Iter) SetList(l *[]interface{}) {
 	this.list = l
 	this.index = -1
+	this.currentPage = 1
 }
 // For testing purpose only
-func (this *Iter) _SetNextQuery(query *Query) {
+func (this *Iter) SetNextQuery(query *Query) {
 	this.nextPageQuery = query
 }
