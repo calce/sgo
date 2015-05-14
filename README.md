@@ -33,48 +33,62 @@ func main() {
 
 Transaction Management
 
-|              | List | Retrieve | Delete | Update | Upload | Tests |
-|--------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
-| Payments     |  ☑︎   |          |        |      |          |     ![](http://progressed.io/bar/20)   |
+|                   | List | Retrieve | Delete | Update | Upload | Tests |
+|-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
+| Payments          |  ✔   |    ✔     |        |        |        |![](http://progressed.io/bar/20)|
+| Settlements       |      |          |        |        |        |![](http://progressed.io/bar/0) |
+| Refunds           |      |          |        |        |        |![](http://progressed.io/bar/20)|
+| Orders            |   ︎   |          |        |        |        |![](http://progressed.io/bar/20)|
+| Merchant          |   ︎   |          |        |        |        |![](http://progressed.io/bar/20)|
+| Bank Accounts     |   ︎   |          |        |        |        |![](http://progressed.io/bar/20)|
 
 
-* Transaction Management
-	* [X] ![](http://progressed.io/bar/20) Payments
-	* [ ] ![](http://progressed.io/bar/0) Settlements
-	* [ ] ![](http://progressed.io/bar/0) Refunds
-	* [ ] ![](http://progressed.io/bar/0) Orders
-	* [ ] ![](http://progressed.io/bar/0) Merchant
-	* [ ] ![](http://progressed.io/bar/0) Bank Accounts
 
-* Item Management
-	* [ ] ![](http://progressed.io/bar/0) Items
-	* [ ] ![](http://progressed.io/bar/0) Variations
-	* [ ] ![](http://progressed.io/bar/0) Inventory
-	* [ ] ![](http://progressed.io/bar/0) Modifier Lists
-	* [ ] ![](http://progressed.io/bar/0) Modifier Options
-	* [ ] ![](http://progressed.io/bar/0) Categories
-	* [ ] ![](http://progressed.io/bar/0) Discounts
-	* [ ] ![](http://progressed.io/bar/0) Fees
-	* [ ] ![](http://progressed.io/bar/0) Pages
-	* [ ] ![](http://progressed.io/bar/0) Cells
+Item Management
 
-* Batching
-	* [ ] ![](http://progressed.io/bar/0) Submit Batch
+|                   | List | Retrieve | Delete | Update | Upload | Tests |
+|-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
+| Items             |      |          |        |        |        |![](http://progressed.io/bar/20)|
+| Variations        |      |          |        |        |        |![](http://progressed.io/bar/0) |
+| Inventory         |      |          |        |        |        |![](http://progressed.io/bar/20)|
+| Modifier Lists    |   ︎   |          |        |        |        |![](http://progressed.io/bar/20)|
+| Merchant          |   ︎   |          |        |        |        |![](http://progressed.io/bar/20)|
+| Modifier Options  |   ︎   |          |        |        |        |![](http://progressed.io/bar/20)|
+| Categories        |      |          |        |        |        |![](http://progressed.io/bar/20)|
+| Discounts         |      |          |        |        |        |![](http://progressed.io/bar/20)|
+| Fees              |      |          |        |        |        |![](http://progressed.io/bar/20)|
+| Pages             |      |          |        |        |        |![](http://progressed.io/bar/20)|
+| Cells             |   ︎   |          |        |        |        |![](http://progressed.io/bar/20)|
 
-* API Webhooks
-	* [ ] ![](http://progressed.io/bar/0) List
-	* [ ] ![](http://progressed.io/bar/0) Update
+Batching
 
-* Subscription Management
-	* [ ] ![](http://progressed.io/bar/0) Subscriptions
-	* [ ] ![](http://progressed.io/bar/0) Plans
+|                   | List | Retrieve | Delete | Update | Upload | Tests |
+|-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
+| Submit Batch      |      |          |        |        |        |![](http://progressed.io/bar/20)|
 
-* Multi-Location Management
-	* [ ] ![](http://progressed.io/bar/0) List Locations
-	* [ ] ![](http://progressed.io/bar/0) Retrieve Business
+API Webhooks
 
-* Employee Management
-	* [ ] ![](http://progressed.io/bar/0) Employees
-	* [ ] ![](http://progressed.io/bar/0) Roles
-	* [ ] ![](http://progressed.io/bar/0) Timecards
-	* [ ] ![](http://progressed.io/bar/0) Cash Drawer Shifts
+|                   | List | Retrieve | Delete | Update | Upload | Tests |
+|-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
+| API Webhooks      |      |          |        |        |        |![](http://progressed.io/bar/20)|
+
+Subscription Management
+
+|                   | List | Retrieve | Delete | Update | Upload | Tests |
+|-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
+| Subscriptions     |      |          |        |        |        |![](http://progressed.io/bar/20)|
+| Plans             |      |          |        |        |        |![](http://progressed.io/bar/20)|
+
+Multi-Location Management
+|                   | List | Retrieve | Delete | Update | Upload | Tests |
+|-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
+| Location          |      |          |        |        |        |![](http://progressed.io/bar/20)|
+
+Employee Management
+
+|                     | List | Retrieve | Delete | Update | Upload | Tests |
+|---------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
+| Employees           |      |          |        |        |        |![](http://progressed.io/bar/20)|
+| Roles               |      |          |        |        |        |![](http://progressed.io/bar/0) |
+| Timecards           |      |          |        |        |        |![](http://progressed.io/bar/20)|
+| Cash Drawer Shifts  |   ︎   |          |        |        |        |![](http://progressed.io/bar/20)|
