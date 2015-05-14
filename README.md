@@ -33,11 +33,12 @@ func main() {
 
 Transaction Management
 
-|              | List | Retrieve | Delete | Update | Upload |
-|--------------|:----:|:--------:|:------:|:------:|:------:|
-| Payments     |  [X] |    [X]   |  [ ]   |   [ ]  |        |
+|              | List | Retrieve | Delete | Update | Upload | Tests |
+|--------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
+| Payments     |  [X] |    [X]   |  [ ]   |   [ ]  |        |    ![](http://progressed.io/bar/20)   |
 
 
+* Transaction Management
 	* [X] ![](http://progressed.io/bar/20) Payments
 	* [ ] ![](http://progressed.io/bar/0) Settlements
 	* [ ] ![](http://progressed.io/bar/0) Refunds
