@@ -38,9 +38,9 @@ Transaction Management
 | Payments          |  ✔   |    ✔     |        |        |        |![](http://progressed.io/bar/20)|
 | Settlements       |      |          |        |        |        |![](http://progressed.io/bar/0) |
 | Refunds           |      |          |        |        |        |![](http://progressed.io/bar/20)|
-| Orders            |   ︎   |          |        |        |        |![](http://progressed.io/bar/20)|
-| Merchant          |   ︎   |          |        |        |        |![](http://progressed.io/bar/20)|
-| Bank Accounts     |   ︎   |          |        |        |        |![](http://progressed.io/bar/20)|
+| Orders            |      |          |        |        |        |![](http://progressed.io/bar/20)|
+| Merchant          |      |          |        |        |        |![](http://progressed.io/bar/20)|
+| Bank Accounts     |      |          |        |        |        |![](http://progressed.io/bar/20)|
 
 
 
@@ -51,14 +51,14 @@ Item Management
 | Items             |      |          |        |        |        |![](http://progressed.io/bar/20)|
 | Variations        |      |          |        |        |        |![](http://progressed.io/bar/0) |
 | Inventory         |      |          |        |        |        |![](http://progressed.io/bar/20)|
-| Modifier Lists    |   ︎   |          |        |        |        |![](http://progressed.io/bar/20)|
-| Merchant          |   ︎   |          |        |        |        |![](http://progressed.io/bar/20)|
-| Modifier Options  |   ︎   |          |        |        |        |![](http://progressed.io/bar/20)|
+| Modifier Lists    |      |          |        |        |        |![](http://progressed.io/bar/20)|
+| Merchant          |      |          |        |        |        |![](http://progressed.io/bar/20)|
+| Modifier Options  |      |          |        |        |        |![](http://progressed.io/bar/20)|
 | Categories        |      |          |        |        |        |![](http://progressed.io/bar/20)|
 | Discounts         |      |          |        |        |        |![](http://progressed.io/bar/20)|
 | Fees              |      |          |        |        |        |![](http://progressed.io/bar/20)|
 | Pages             |      |          |        |        |        |![](http://progressed.io/bar/20)|
-| Cells             |   ︎   |          |        |        |        |![](http://progressed.io/bar/20)|
+| Cells             |      |          |        |        |        |![](http://progressed.io/bar/20)|
 
 Batching
 
@@ -80,6 +80,7 @@ Subscription Management
 | Plans             |      |          |        |        |        |![](http://progressed.io/bar/20)|
 
 Multi-Location Management
+
 |                   | List | Retrieve | Delete | Update | Upload | Tests |
 |-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
 | Location          |      |          |        |        |        |![](http://progressed.io/bar/20)|
@@ -91,4 +92,4 @@ Employee Management
 | Employees           |      |          |        |        |        |![](http://progressed.io/bar/20)|
 | Roles               |      |          |        |        |        |![](http://progressed.io/bar/0) |
 | Timecards           |      |          |        |        |        |![](http://progressed.io/bar/20)|
-| Cash Drawer Shifts  |   ︎   |          |        |        |        |![](http://progressed.io/bar/20)|
+| Cash Drawer Shifts  |      |          |        |        |        |![](http://progressed.io/bar/20)|
