@@ -35,12 +35,12 @@ Transaction Management
 
 |                   | List | Retrieve | Delete | Update | Upload | Tests |
 |-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
-| Payments          |  ✔   |    ✔     |        |        |        |![](http://progressed.io/bar/80)|
-| Settlements       |      |          |        |        |        |![](http://progressed.io/bar/0) |
-| Refunds           |      |          |        |        |        |![](http://progressed.io/bar/0)|
-| Orders            |      |          |        |        |        |![](http://progressed.io/bar/0)|
-| Merchant          |      |          |        |        |        |![](http://progressed.io/bar/0)|
-| Bank Accounts     |      |          |        |        |        |![](http://progressed.io/bar/0)|
+| Payments          |  ✔   |    ✔     |        |        |        |![](http://bar.calce.co/80)|
+| Settlements       |      |          |        |        |        |![](http://bar.calce.co/0) |
+| Refunds           |      |          |        |        |        |![](http://bar.calce.co/0)|
+| Orders            |      |          |        |        |        |![](http://bar.calce.co/0)|
+| Merchant          |      |          |        |        |        |![](http://bar.calce.co/0)|
+| Bank Accounts     |      |          |        |        |        |![](http://bar.calce.co/0)|
 
 
 
@@ -48,48 +48,48 @@ Item Management
 
 |                   | List | Retrieve | Delete | Update | Upload | Tests |
 |-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
-| Items             |      |          |        |        |        |![](http://progressed.io/bar/0)|
-| Variations        |      |          |        |        |        |![](http://progressed.io/bar/0) |
-| Inventory         |      |          |        |        |        |![](http://progressed.io/bar/0)|
-| Modifier Lists    |      |          |        |        |        |![](http://progressed.io/bar/0)|
-| Merchant          |      |          |        |        |        |![](http://progressed.io/bar/0)|
-| Modifier Options  |      |          |        |        |        |![](http://progressed.io/bar/0)|
-| Categories        |      |          |        |        |        |![](http://progressed.io/bar/0)|
-| Discounts         |      |          |        |        |        |![](http://progressed.io/bar/0)|
-| Fees              |      |          |        |        |        |![](http://progressed.io/bar/0)|
-| Pages             |      |          |        |        |        |![](http://progressed.io/bar/0)|
-| Cells             |      |          |        |        |        |![](http://progressed.io/bar/0)|
+| Items             |      |          |        |        |        |![](http://bar.calce.co/0)|
+| Variations        |      |          |        |        |        |![](http://bar.calce.co/0) |
+| Inventory         |      |          |        |        |        |![](http://bar.calce.co/0)|
+| Modifier Lists    |      |          |        |        |        |![](http://bar.calce.co/0)|
+| Merchant          |      |          |        |        |        |![](http://bar.calce.co/0)|
+| Modifier Options  |      |          |        |        |        |![](http://bar.calce.co/0)|
+| Categories        |      |          |        |        |        |![](http://bar.calce.co/0)|
+| Discounts         |      |          |        |        |        |![](http://bar.calce.co/0)|
+| Fees              |      |          |        |        |        |![](http://bar.calce.co/0)|
+| Pages             |      |          |        |        |        |![](http://bar.calce.co/0)|
+| Cells             |      |          |        |        |        |![](http://bar.calce.co/0)|
 
 Batching
 
 |                   | List | Retrieve | Delete | Update | Upload | Tests |
 |-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
-| Submit Batch      |      |          |        |        |        |![](http://progressed.io/bar/0)|
+| Submit Batch      |      |          |        |        |        |![](http://bar.calce.co/0)|
 
 API Webhooks
 
 |                   | List | Retrieve | Delete | Update | Upload | Tests |
 |-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
-| API Webhooks      |      |          |        |        |        |![](http://progressed.io/bar/0)|
+| API Webhooks      |      |          |        |        |        |![](http://bar.calce.co/0)|
 
 Subscription Management
 
 |                   | List | Retrieve | Delete | Update | Upload | Tests |
 |-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
-| Subscriptions     |      |          |        |        |        |![](http://progressed.io/bar/0)|
-| Plans             |      |          |        |        |        |![](http://progressed.io/bar/0)|
+| Subscriptions     |      |          |        |        |        |![](http://bar.calce.co/0)|
+| Plans             |      |          |        |        |        |![](http://bar.calce.co/0)|
 
 Multi-Location Management
 
 |                   | List | Retrieve | Delete | Update | Upload | Tests |
 |-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
-| Locations         |      |          |        |        |        |![](http://progressed.io/bar/0)|
+| Locations         |      |          |        |        |        |![](http://bar.calce.co/0)|
 
 Employee Management
 
 |                     | List | Retrieve | Delete | Update | Upload | Tests |
 |---------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
-| Employees           |      |          |        |        |        |![](http://progressed.io/bar/0)|
-| Roles               |      |          |        |        |        |![](http://progressed.io/bar/0) |
-| Timecards           |      |          |        |        |        |![](http://progressed.io/bar/0)|
-| Cash Drawer Shifts  |      |          |        |        |        |![](http://progressed.io/bar/0)|
+| Employees           |      |          |        |        |        |![](http://bar.calce.co/0)|
+| Roles               |      |          |        |        |        |![](http://bar.calce.co/0) |
+| Timecards           |      |          |        |        |        |![](http://bar.calce.co/0)|
+| Cash Drawer Shifts  |      |          |        |        |        |![](http://bar.calce.co/0)|
