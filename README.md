@@ -31,8 +31,9 @@ func main() {
 ```
 ### Progress / Tests
 
-Transaction Management 
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+Transaction Management 
 |                   | List | Retrieve | Delete | Update | Upload | Tests |
 |-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
 | Payments          |  ✔   |    ✔     |        |        |        |![](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "80%")|
