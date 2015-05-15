@@ -15,6 +15,7 @@ func TestIter(t *testing.T) {
 			sgo.Payment{},
 			sgo.Payment{},
 		}
+		p := &sgo.Payment{}
 		
 		list := getList(&pl)
 		siter := &sgo.Iter{}
@@ -27,8 +28,9 @@ func TestIter(t *testing.T) {
 		Convey("be iterable and have correct items", func(){
 			count := 0
 			for iter.HasNext() {
-				_, err := iter.Next()
+				payment, err := iter.Next()
 				So(err, ShouldBeNil)
+				So(payment, ShouldHaveSameTypeAs, p)
 				count++
 			}
 			So(count, ShouldEqual, 3)
