@@ -35,7 +35,7 @@ Transaction Management
 
 |                   | List | Retrieve | Delete | Update | Upload | Tests |
 |-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
-| Payments          |  ✔   |    ✔     |        |        |        |![](http://progressed.io/bar/0)|
+| Payments          |  ✔   |    ✔     |        |        |        |![](http://progressed.io/bar/80)|
 | Settlements       |      |          |        |        |        |![](http://progressed.io/bar/0) |
 | Refunds           |      |          |        |        |        |![](http://progressed.io/bar/0)|
 | Orders            |      |          |        |        |        |![](http://progressed.io/bar/0)|
