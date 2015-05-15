@@ -31,11 +31,11 @@ func main() {
 ```
 ### Progress / Tests
 
-Transaction Management ![](http://bar.calce.co/80.png "80%")
+Transaction Management 
 
 |                   | List | Retrieve | Delete | Update | Upload | Tests |
 |-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
-| Payments          |  ✔   |    ✔     |        |        |        |![](http://bar.calce.co/80 "80%")|
+| Payments          |  ✔   |    ✔     |        |        |        |![](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "80%")|
 | Settlements       |      |          |        |        |        |![](http://bar.calce.co/0) |
 | Refunds           |      |          |        |        |        |![](http://bar.calce.co/0)|
 | Orders            |      |          |        |        |        |![](http://bar.calce.co/0)|
