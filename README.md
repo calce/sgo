@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/calce/sgo.svg)](https://travis-ci.org/calce/sgo)
 # sgo
 Golang [Square Connect API](https://connect.squareup.com)
 
