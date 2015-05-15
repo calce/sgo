@@ -31,7 +31,7 @@ func main() {
 ```
 ### Progress / Tests
 
-Transaction Management ![](http://bar.calce.co/80 "80%")
+Transaction Management ![](http://bar.calce.co/80.png "80%")
 
 |                   | List | Retrieve | Delete | Update | Upload | Tests |
 |-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
