@@ -35,8 +35,8 @@ Transaction Management
 
 |                   | List | Retrieve | Delete | Update | Upload | Tests |
 |-------------------|:----:|:--------:|:------:|:------:|:------:|:-----:|
-| Payments          |  ✔   |    ✔     |        |        |        |[![](http://bar.calce.co/80 80%)](http://bar.calce.co/80)|
-| Settlements       |      |          |        |        |        |![](http://bar.calce.co/0) |
+| Payments          |  ✔   |    ✔     |        |        |        |[![](http://bar.calce.co/80)](http://bar.calce.co/80)|
+| Settlements       |      |          |        |        |        |![](http://bar.calce.co/0 0%) |
 | Refunds           |      |          |        |        |        |![](http://bar.calce.co/0)|
 | Orders            |      |          |        |        |        |![](http://bar.calce.co/0)|
 | Merchant          |      |          |        |        |        |![](http://bar.calce.co/0)|
